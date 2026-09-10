@@ -12,3 +12,50 @@ class Estudiante {
         curso.mostrarCurso();
     }
 }
+
+
+//Clase Curso
+
+class Curso {
+    String nombre;
+
+    public Curso(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public void mostrarCurso() {
+        System.out.println("Curso: " + nombre);
+    }
+}
+
+
+//clase Main
+
+public class Main {
+    public static void main(String[] args) {
+
+        Curso curso1 = new Curso("Programación en Java");
+        Curso curso2 = new Curso("Lenguaje de programacion");
+
+        Estudiante estudiante1 = new Estudiante("Kevin", curso1);
+        Estudiante estudiante2 = new Estudiante("Juan", curso1);
+        Estudiante estudiante3 = new Estudiante("Pedro", curso1);
+        Estudiante estudiante4 = new Estudiante("lucia", curso2);
+        Estudiante estudiante5 = new Estudiante("Maria", curso2);
+        Estudiante estudiante6 = new Estudiante("sthefania", curso2);
+
+        Estudiante[] estudiantes = {
+    estudiante1,
+    estudiante2,
+    estudiante3,
+    estudiante4,
+    estudiante5,
+    estudiante6
+};
+
+for (Estudiante e : estudiantes) {
+    e.mostrarInformacion();
+
+    }
+    }
+}
