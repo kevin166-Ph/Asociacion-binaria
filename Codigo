@@ -1,1 +1,14 @@
+class Estudiante {
+    String nombre;
+    Curso curso; // Asociación binaria
 
+    public Estudiante(String nombre, Curso curso) {
+        this.nombre = nombre;
+        this.curso = curso;
+    }
+
+    public void mostrarInformacion() {
+        System.out.println("Estudiante: " + nombre);
+        curso.mostrarCurso();
+    }
+}
